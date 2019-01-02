@@ -1,11 +1,12 @@
+require('dotenv').config()
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 const Clarifai = require('clarifai');
-// const dotenv = require("dotenv");
-require('dotenv').config()
+
 
 const clarifaiApp = new Clarifai.App({
  apiKey: process.env.SECRET_KEY
