@@ -13,6 +13,7 @@ const clarifaiApp = new Clarifai.App({
 });
 
 const handleApi = (req, res) => {
+  console.log(process.env)
   clarifaiApp.models.predict(Clarifai.FACE_DETECT_MODEL, req.body.input)
   .then(data => {
     res.json(data)
@@ -130,5 +131,5 @@ app.post('/imageurl', (req, res) => {
 })
 
 app.listen(process.env.PORT || 3000, () => {
-  console.log(`running on port 3-`)
+  console.log('running on port-')
 })
