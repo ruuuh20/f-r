@@ -4,7 +4,8 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex');
 const Clarifai = require('clarifai');
-const dotenv = require("dotenv");
+// const dotenv = require("dotenv");
+require('dotenv').config()
 
 const clarifaiApp = new Clarifai.App({
  apiKey: process.env.SECRET_KEY
